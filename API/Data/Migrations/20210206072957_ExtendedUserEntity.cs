@@ -26,6 +26,12 @@ namespace API.Data.Migrations
                 type: "TEXT",
                 nullable: true);
 
+            migrationBuilder.AddColumn<string>(
+                name: "KnownAs",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
             migrationBuilder.AddColumn<DateTime>(
                 name: "LastActive",
                 table: "Users",
@@ -76,6 +82,10 @@ namespace API.Data.Migrations
 
             migrationBuilder.DropColumn(
                 name: "Information",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "KnownAs",
                 table: "Users");
 
             migrationBuilder.DropColumn(
